@@ -35,4 +35,22 @@ return [
         ],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Xenovida External API
+    |--------------------------------------------------------------------------
+    |
+    | Credentials and base URL for the external Xenovida platform used by the
+    | Body Composition integration. Values come from the environment so the
+    | API key is never hardcoded in source control. Consumed exclusively by
+    | App\Services\BodyCompositionService.
+    |
+    */
+
+    'xenovida' => [
+        'url' => env('XV_API_URL'),
+        'key' => env('XV_API_KEY'),
+        'timeout' => (int) env('XV_API_TIMEOUT', 30),
+    ],
+
 ];
