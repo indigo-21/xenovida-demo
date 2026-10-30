@@ -177,7 +177,7 @@
                         left_leg_muscle_mass_kg: 8.1, left_leg_fat_mass_kg: 2.0,
                         right_leg_muscle_mass_kg: 8.3, right_leg_fat_mass_kg: 2.0,
                         patient: {
-                            firstname: 'Jane', lastname: 'Doe', email: '',
+                            firstname: 'Jane', lastname: 'Smith', email: '',
                             postcode: '', telephone: '', mobile: '',
                             dob: '', gender: 'Female', patient_code: '', external_patient_id: '',
                         },

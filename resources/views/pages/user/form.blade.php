@@ -158,7 +158,7 @@
             </div>
             <!-- /.card-body -->
 
-            <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="card-footer d-flex justify-content-center align-items-center">
                 <div>
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-save mr-1"></i>
@@ -167,15 +167,14 @@
                     <a href="{{ route('user.index') }}" class="btn btn-secondary ml-2">
                         Cancel
                     </a>
+                    @isset($user)
+                        <a href="{{ route('user.destroy', $user->id) }}"
+                        landto="{{ route('user.index') }}"
+                        class="btn btn-danger delete-data-btn">
+                            <i class="fas fa-trash mr-1"></i> Delete User
+                        </a>
+                    @endisset
                 </div>
-
-                @isset($user)
-                    <a href="{{ route('user.destroy', $user->id) }}"
-                       landto="{{ route('user.index') }}"
-                       class="btn btn-danger delete-data-btn">
-                        <i class="fas fa-trash mr-1"></i> Delete User
-                    </a>
-                @endisset
             </div>
         </form>
     </div>

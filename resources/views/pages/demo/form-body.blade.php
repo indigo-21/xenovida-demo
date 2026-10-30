@@ -188,20 +188,20 @@
                 <div class="col-6">
                     <div class="form-group mb-2">
                         <label class="mb-1 small">First name</label>
-                        <input type="text" class="form-control form-control-sm" x-model="bc.patient.firstname">
+                        <input type="text" class="form-control form-control-sm" value="{{$patient->firstname}}">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group mb-2">
                         <label class="mb-1 small">Last name</label>
-                        <input type="text" class="form-control form-control-sm" x-model="bc.patient.lastname">
+                        <input type="text" class="form-control form-control-sm" value="{{$patient->lastname}}">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-group mb-2">
                         <label class="mb-1 small">Email</label>
                         <input type="email" class="form-control form-control-sm"
-                            :class="err('patient.email') && 'is-invalid'" x-model="bc.patient.email">
+                            :class="err('patient.email') && 'is-invalid'"  value="{{$patient->email}}">
                         <div class="invalid-feedback" x-text="errText('patient.email')"></div>
                     </div>
                 </div>
@@ -209,7 +209,7 @@
                     <div class="form-group mb-2">
                         <label class="mb-1 small">Date of birth</label>
                         <input type="date" class="form-control form-control-sm" :max="today"
-                            x-model="bc.patient.dob">
+                            value="{{$patient->dob}}">
                     </div>
                 </div>
                 <div class="col-6">
@@ -226,13 +226,13 @@
                 <div class="col-6">
                     <div class="form-group mb-2">
                         <label class="mb-1 small">Mobile</label>
-                        <input type="text" class="form-control form-control-sm" x-model="bc.patient.mobile">
+                        <input type="text" class="form-control form-control-sm" value="{{$patient->mobile}}">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group mb-2">
                         <label class="mb-1 small">Postcode</label>
-                        <input type="text" class="form-control form-control-sm" x-model="bc.patient.postcode">
+                        <input type="text" class="form-control form-control-sm" value="{{$patient->postcode}}">
                     </div>
                 </div>
             </div>

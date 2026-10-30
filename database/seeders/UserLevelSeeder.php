@@ -17,11 +17,8 @@ class UserLevelSeeder extends Seeder
     public function run(): void
     {
         $levels = [
-            ['description' => 'Super Administrator'],
-            ['description' => 'Administrator'],
-            ['description' => 'Manager'],
-            ['description' => 'Staff'],
-            ['description' => 'Viewer'],
+            ['description' => 'Master-User'],
+            ['description' => 'Clinician']
         ];
 
         foreach ($levels as $level) {

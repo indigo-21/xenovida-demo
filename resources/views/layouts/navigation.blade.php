@@ -70,11 +70,18 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('patient.index') }}"
+                            class="nav-link {{ request()->routeIs('patient.*') ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-user-injured"></i>
+                            <p>Patients</p>
+                        </a>
+                    </li>
                 @endauth
 
                 @php($demoMode = request()->routeIs('demo') ? request()->query('mode', 'body') : null)
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="{{ route('demo') }}"
                         class="nav-link {{ $demoMode === 'body' ? 'active' : '' }}">
                         <i class="nav-icon fas fa-heartbeat"></i>
@@ -96,9 +103,9 @@
                         <i class="nav-icon fas fa-chart-line"></i>
                         <p>Essential Progress Demo</p>
                     </a>
-                </li>
+                </li> -->
 
-                @auth
+                @if (Auth::user()?->user_level_id == 1)
                     <li class="nav-header">Administrator</li>
 
                     <li class="nav-item">
@@ -116,7 +123,7 @@
                             <p>Users</p>
                         </a>
                     </li>
-                @endauth
+                @endif
 
             </ul>
         </nav>

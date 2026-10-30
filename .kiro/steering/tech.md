@@ -6,7 +6,7 @@
 - **Laravel 12** (framework)
 - **Laravel Breeze** — authentication scaffolding (Blade stack)
 - **Laravel Tinker**, **Pail** (log tailing), **Pint** (code style), **Sail**
-- HTTP client: Laravel `Http` facade (Guzzle) for the external Xenovida API
+- HTTP client: Laravel `Http` facade (Guzzle) for the external Xenovida APIs
 
 ## Frontend
 
@@ -18,7 +18,7 @@
 
 ## Testing
 
-- **PHPUnit 11** (`tests/` via `Tests\` namespace), with Mockery and FakerPHP
+- **PHPUnit 11** (`tests/` via `Tests\` namespace, split into `Feature/` and `Unit/`), with Mockery and FakerPHP
 
 ## Configuration
 

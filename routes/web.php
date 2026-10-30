@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BodyCompositionController;
 use App\Http\Controllers\EssentialSheetController;
+use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgressSheetController;
 use App\Http\Controllers\UserController;
@@ -32,6 +33,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('user', UserController::class);
     Route::resource('user-level', UserLevelController::class);
+    Route::resource('patient', PatientController::class);
 });
 
 require __DIR__.'/auth.php';
